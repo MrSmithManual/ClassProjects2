@@ -1,0 +1,6 @@
+{
+    "name": "PracticeFeb23", "version": "1.0.0", "keywords": [
+        "util", "functional", "server", "client", "browser"
+    ], "author": "hasmith", "contributors": [
+    ], "dependencies": {}
+}

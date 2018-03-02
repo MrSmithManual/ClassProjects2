@@ -1,0 +1,155 @@
+<!--
+Title       : Sample HTML Program
+Programmer  : Harold Smith
+Date        : Feb 28, 2018
+Purpose     : To experiment with HTML, embedded CSS, and video backgrounds
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Michael Jackson           
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * 
+            {
+                box-sizing: border-box;
+            }
+
+            body 
+            {
+                margin: 0;
+                font-family: Arial;
+                font-size: 17px;
+            }
+
+            #myVideo 
+            {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%; 
+                min-height: 100%;
+            }
+
+            .content 
+            {
+                position: fixed;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+            }
+
+            #myBtn 
+            {   height: 75px;
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #000;
+                color: #fff;
+                cursor: pointer;
+            }
+            
+            #myBtn2 
+            {   height: 75px;
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #FF0000;
+                color: #fff;
+                cursor: pointer;
+            }
+            
+            #myBtn3 
+            {   height: 75px;
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #0000FF;
+                color: #0ff;
+                cursor: pointer;
+            }
+
+            #myBtn:hover {
+                background: #ddd;
+                color: black;
+            }
+            
+            h1
+            {
+                position:static;
+                top: -8%;
+                width: 100%;
+                font-size: 75px;
+                letter-spacing: 2px;
+                color: pink;
+                font-family: Oswald, sans-serif;
+                text-align: left;
+            }
+            
+            h2 
+            {
+                background-color:rgba(0, 0, 0, .5);
+                position: static;
+                top: 8%;
+                left:0%;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                color: white;
+                font-family: Oswald, sans-serif;
+                text-align: left;
+            }
+        </style>
+    </head>
+        <body>
+
+        <video autoplay muted loop id="myVideo">
+          <source src="newmj.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+
+        <div class="content">
+          <h1>The Moonwalker</h1>
+          <h2>Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American singer, songwriter, actor, philanthropist, and dancer.
+          </h2>
+          <button id="myBtn" onclick="myFunction()">Pause</button>
+          <button id="myBtn2" onclick="myFunction2()">Michael Jackson</button>
+          <button id="myBtn3" onclick="myFunction3()">Rick Rude vs Vader</button>
+        </div>
+
+        <script>
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("myBtn");
+
+            function myFunction() 
+            {
+              if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+              } else {
+                video.pause();
+                btn.innerHTML = "Play";
+              }
+            }
+            
+            function myFunction2() 
+            {
+               window.location="page2.html";
+            }
+            
+            function myFunction3() 
+            {
+               window.location="page3.html";
+            }
+        </script>
+    </body>
+</html>

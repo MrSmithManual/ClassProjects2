@@ -1,0 +1,60 @@
+<!
+File Name       : page1.html
+Project         : SampleProject2Feb122018
+Programmer      : Harold Smith
+Date            : February 12, 2018
+Purpose         : To demonstrate how to play audio files in a webpage using Javascript
+                : This one uses buttons instead of radio
+>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aqua Boogie</title>
+</head>
+    
+<body onLoad="aquaBoogie()">
+<h3><label id="header1">Aqua Boogie was released in 1978 by Parliament</label></h3>
+<button type="button"  
+                style="
+                background-color: blueviolet;
+                background-size: 300px 200px;
+                font-size : 25px; 
+                height: 200px; 
+                width: 300px; 
+                font-family : Comic Sans MS, cursive, sans-serif; 
+                color : white" 
+                onclick=window.location.replace('index.html');
+                id="button1">
+                Return to the Main Page
+        </button>
+
+ 
+<audio id="AquaBoogie">
+    <source src="aquaboogie.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+   
+<script>
+
+function aquaBoogie()
+{  
+    var head1 = document.getElementById("header1");
+    head1.style.color = 'brown';
+    head1.style.fontSize = '50px';
+    head1.style.fontFace = 'Arial';
+    document.body.style.backgroundImage = "url('aquaboogie.jpg')";
+    x = document.getElementById("AquaBoogie"); 
+    x.play(); 
+}
+
+    
+function pauseAudio() 
+    {   x.pause();
+        document.body.style.backgroundColor = "red"; 
+    } 
+</script>
+
+</body> 
+
+</html>

@@ -1,0 +1,67 @@
+<!
+File Name       : index.html
+Project         : SampleProject2Feb142018
+Programmer      : Harold Smith
+Date            : February 12, 2018
+Purpose         : To demonstrate how to play audio files in a webpage using Javascript
+                : This one uses buttons instead of radio and redirects to a new page
+>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smitty's JukeBox Program</title>
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+    <h3><label id="header1">A demonstration of placing buttons in a table, editing the background of the button</label></h3>
+
+<table id="myTable">
+  <tr>
+    <td>
+        <button type="button"  
+                style="
+                background-image: url('aquaboogie.jpg');
+                background-size: 300px 200px;
+                font-size : 55px; 
+                height: 200px; 
+                width: 300px; 
+                font-family : Times; 
+                color : red" 
+                onclick=window.location.replace("page1.html");
+                id="button1" >
+        </button>
+    </td>
+        
+    <td>
+        <button type="button"  
+                style= 
+                "background-image: url('https://pbs.twimg.com/profile_images/722855420822294528/jDk4eEy1_400x400.jpg');
+                background-size: 300px 200px; 
+                font-size : 55px; 
+                height: 200px; 
+                width: 300px; 
+                font-family : Arial; 
+                color : red; " 
+                onclick=window.location.replace("page2.html");  
+                id="button2" >
+        </button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        Add a button here
+    </td>
+    <td>
+        Add a button here 
+  </tr>
+</table>
+
+
+</body>
+</html>

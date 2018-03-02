@@ -1,0 +1,96 @@
+<!
+File Name       : index.html
+Project         : SampleProject2Feb122018
+Programmer      : Harold Smith
+Date            : February 12, 2018
+Purpose         : To demonstrate how to play audio files in a webpage using Javascript
+                : This one uses buttons instead of radio
+>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+    <h3><label id="header1">A demonstration of placing buttons in a table, editing the background of the button</label></h3>
+
+<table id="myTable">
+  <tr>
+    <td>
+        <button type="button"  
+                style="
+                background-image: url('aquaboogie.jpg');
+                background-size: 300px 200px;
+                font-size : 55px; 
+                height: 200px; 
+                width: 300px; 
+                font-family : Impact; 
+                color : white" 
+                onclick="aquaBoogie()" 
+                id="button1" >
+                Aqua Boogie - Parliament
+        </button>
+    </td>
+        
+    <td><button type="button"  style= "background-image: url('https://pbs.twimg.com/profile_images/722855420822294528/jDk4eEy1_400x400.jpg');
+                background-size: 300px 200px; 
+                font-size : 55px; 
+                height: 200px; 
+                width: 300px; 
+                font-family : Arial;
+                color : red; " onclick="popcornMan()" id="button2" >
+            Otis Spann
+            </button></td>
+  </tr>
+  <tr>
+    <td><button type="button"  style= "background-image: url('Photo_TheOrchar_300RGB.jpg'); background-size: 300px 200px; font-size : 55px; height: 200px; width: 300px; font-family : Impact; color : white" onclick="aquaBoogie()" id="button3" >Lizz Wright</button></td>
+    <td><button type="button"  style= "font-size : 55px; height: 200px; width: 300px; font-family : Impact; color : green;background-color: #008CBA;" onclick="aquaBoogie()" id="button4" >Aqua Boogie - Parliament</button></td>
+  </tr>
+</table>
+
+
+<audio id="AquaBoogie">
+    <source src="aquaboogie.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+                             
+<audio id="PopcornMan">
+    <source src="popcornman.mp3" type="audio/mpeg">
+    
+    Your browser does not support the audio element.
+</audio>
+                    
+<button onclick="pauseAudio()" type="button">Pause Audio</button> 
+<script>
+function aquaBoogie()
+{   var head1 = document.getElementById("header1");
+    head1.style.color = 'white';
+    document.body.style.backgroundImage = "url('aquaboogie.jpg')";
+    x = document.getElementById("AquaBoogie"); 
+    x.play();    
+}
+
+function popcornMan()
+{   var head1 = document.getElementById("header1");
+    head1.style.color = 'white';
+    document.body.style.backgroundImage = "url('spann1.jpg')";
+    x = document.getElementById("PopcornMan"); 
+    x.play();    
+}
+
+    
+function pauseAudio() 
+    {   x.pause();
+        document.body.style.backgroundColor = "red"; 
+    } 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!--
+Title       : Sample HTML Program
+Programmer  : Harold Smith
+Date        : Feb 28, 2018
+Purpose     : To experiment with HTML, embedded CSS, and video backgrounds
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * 
+            {
+                box-sizing: border-box;
+            }
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+ #myVideo 
+            {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%; 
+                min-height: 100%;
+                
+            }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-color: red;
+    border-width: 25px;
+    position: fixed;
+    bottom: 13%;
+    background: rgba(0, 0, 0, .9);
+    color: crimson;
+    width: 50%;
+    height: 50%;
+}
+</style>
+</head>
+<body>
+<video autoplay loop id="myVideo" muted>
+          <source src="emtedited.mp4" type="video/mp4" >
+          Your browser does not support HTML5 video.
+</video>
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Home High School</label>
+    <select id="country" name="country">
+      <option value="central">Central</option>
+      <option value="paseo">Paseo</option>
+      <option value="southwest">Southwest</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="How may we help you?" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

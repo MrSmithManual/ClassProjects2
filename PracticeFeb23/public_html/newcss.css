@@ -1,0 +1,100 @@
+body 
+{
+  margin: 0;
+  padding: 0;
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+  background: #333;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* The only rule that matters */
+#video-background 
+{
+/*  making the video fullscreen  */
+  position: fixed;
+  left: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+/* These just style the content */
+article {
+/*  just a fancy border  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  margin: 10px;
+}
+
+h1 
+{
+  position:static;
+  top: -8%;
+  width: 100%;
+  font-size: 75px;
+  letter-spacing: 2px;
+  color: pink;
+  font-family: Oswald, sans-serif;
+  text-align: left;
+}
+
+
+h2 {
+  background-color:rgba(0, 0, 0, .5);
+  position: static;
+  top: 8%;
+  left:0%;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  font-family: Oswald, sans-serif;
+  text-align: left;
+}
+
+h3 {
+  position: static;
+  left:0%;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  font-family: Oswald, sans-serif;
+  text-align: left;
+}
+
+h4 {
+  background-color:rgba(72,209,204,1);
+  position: absolute ;
+  bottom: 00%;
+  height: 4%;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color:  #E30B5D;
+  font-family: Oswald, sans-serif;
+  text-align: center;
+}
+
+h1 span {
+  font-family: sans-serif;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1 span a {
+  color: #fff;
+}
